@@ -37,7 +37,7 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok-mapstruct-binding:0.2.0' // v1.18.16+ 부터
 
 	//mySql
-	runtimeOnly 'com.mysql:mysql-connector-java'
+	runtimeOnly("com.mysql:mysql-connector-j")
 
 	// spring-boot-starter-test -> mockito, JUnit도 사용 가능
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
