@@ -7,7 +7,7 @@ import com.bootproject.bootproject.root.vo.BoardVO;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", uses = {UserMapper.class, CategoryMapper.class})
 public interface BoardMapper {
 	BoardMapper INSTANCE = Mappers.getMapper(BoardMapper.class);
 	

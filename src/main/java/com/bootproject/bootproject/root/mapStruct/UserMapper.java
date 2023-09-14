@@ -17,5 +17,7 @@ public interface UserMapper {
 	User toEntity(RegisterUserDTO userDTO);
 	  
 	User toEntity(UserVO userVO);
+
+	UserVO toVO(User user);
 	
 }

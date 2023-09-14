@@ -15,9 +15,9 @@ import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-@Slf4j
-@RequiredArgsConstructor
-@Component
+//@Slf4j
+//@RequiredArgsConstructor
+//@Component
 public class VerifyUserFilter implements Filter {
     public static final String AUTHENTICATE_USER = "authenticateUser";
     
@@ -28,7 +28,7 @@ public class VerifyUserFilter implements Filter {
     
     
     // Component와 RequireArgsConstructor가 있으면 Autowired가 없어도 자동 DI된다고 함. 
-    @Autowired
+//    @Autowired
     VerifyUserFilter(ObjectMapper objectMapper, UserService userService){
     	this.objectMapper = objectMapper;
     	this.userService = userService;
@@ -65,7 +65,7 @@ public class VerifyUserFilter implements Filter {
 					throw new IllegalArgumentException();
 				}
 			}catch(Exception e) {
-				 log.error("Fail User Verify");
+//				 log.error("Fail User Verify");
 				 e.printStackTrace();
 	             HttpServletResponse httpServletResponse = (HttpServletResponse) response;
 	             httpServletResponse.sendError(HttpStatus.BAD_REQUEST.value());

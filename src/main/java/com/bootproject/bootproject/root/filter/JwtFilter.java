@@ -13,8 +13,8 @@ import org.springframework.stereotype.Component;
 import javax.servlet.*;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-@Component
-@RequiredArgsConstructor
+//@Component
+//@RequiredArgsConstructor
 public class JwtFilter implements Filter {
 	//RequriedArgsConstructor만 있어도 빈으로 등록되고 DI를 처리한다고 함...
 	private JWTProvider jwtProvider;
